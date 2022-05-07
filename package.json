@@ -1,0 +1,32 @@
+{
+  "name": "tech_blog",
+  "version": "1.0.0",
+  "description": "```md\r AS A developer who writes about tech\r I WANT a CMS-style blog site\r SO THAT I can publish articles, blog posts, and my thoughts and opinions\r ```",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "seed": "node seeds/index.js",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sevalc/Tech_blog.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sevalc/Tech_blog/issues"
+  },
+  "homepage": "https://github.com/sevalc/Tech_blog#readme",
+  "dependencies": {
+    "bcrypt": "^5.0.1",
+    "connect-session-sequelize": "^7.1.3",
+    "dotenv": "^16.0.0",
+    "express": "^4.18.1",
+    "express-handlebars": "^6.0.5",
+    "express-session": "^1.17.2",
+    "mysql2": "^2.3.3",
+    "sequelize": "^6.19.0"
+  }
+}
