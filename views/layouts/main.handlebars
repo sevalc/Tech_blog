@@ -11,11 +11,12 @@
     <header>
          {{#if loggedIn}}
             <p>Hello, {{username}}</p>
-            <a href="/profile">profile</a>
-            <a href="/api/users/logout">logout</a>
+            <a href="/">Home</a>
+            <a href="/profile">Dashboard</a>
+            <a href="/api/users/logout">Logout</a>
         {{else}}
-        <a href="/home">Home</a>
-        <a href="/login">Login</a>
+        <a href="/">Home</a>
+        <a href="/login">Login/Sign Up</a>
         <a href="/dashboard">Dashboard</a>
         {{/if}}
         <h2 id="navLinksHeader">The Tech Blog</h2>

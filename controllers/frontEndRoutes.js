@@ -7,7 +7,10 @@ router.get("/",(req,res)=>{
         const hbsBlogs = blogs.map(blog=>blog.get({plain:true}))
         console.log(hbsBlogs)
         const loggedIn = req.session.user?true:false
-        res.render("home",{blogs:hbsBlogs,loggedIn,username:req.session.user?.username})
+        res.render("home",{
+            blogs:hbsBlogs,
+            loggedIn,
+            username:req.session.user?.username})
     })
 })
 
@@ -16,6 +19,14 @@ router.get("/login",(req,res)=>{
         return res.redirect("/profile")
     }
     res.render("login")
+})
+
+router.get("/dashboard",(req,res) => {
+    if(req.session.user){
+        return res.redirect("/profile")
+    }
+    res.render("login")
+      
 })
 
 router.get("/profile",(req,res)=>{

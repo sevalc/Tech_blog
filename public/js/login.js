@@ -28,7 +28,7 @@ document.querySelector("#signup").addEventListener("submit",e=>{
         password:document.querySelector("#signupPassword").value,
     }
     console.log(userObj)
-    fetch("/api/users/",{
+    fetch("/api/users",{
         method:"POST",
         body:JSON.stringify(userObj),
         headers:{
@@ -43,24 +43,4 @@ document.querySelector("#signup").addEventListener("submit",e=>{
     })
 })
 
-document.querySelector("#signup").addEventListener("submit",e=>{
-    e.preventDefault();
-    const userObj = {
-        username:document.querySelector("#signupUsername").value,
-        password:document.querySelector("#signupPassword").value,
-    }
-
-fetch("/api/users/",{
-    method:"POST",
-    body:JSON.stringify(userObj),
-    headers:{
-        "Content-Type":"application/json"
-    }
-}).then(res=>{
-    if(res.ok){
-        console.log("Signed up!")
-    } else {
-        alert("Incorrect Info")
-    }
-})
 
