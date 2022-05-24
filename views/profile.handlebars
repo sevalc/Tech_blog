@@ -1,15 +1,20 @@
-<h1>Welcome back {{username}}</h1>
-<h2>All your blogs:</h2>
+<h2>Submit A new Post</h2>
 <form action="" id="newBlog">
     <input type="text" id="title" placeholder="title">
+    <hr>
     <textarea id="body" cols="30" rows="10"></textarea>
     <button>Submit</button>
 </form>
+<h2>All your blogs:</h2>
+<div id="blogList">
 {{#each Blogs}}
-    <h3>{{title}}</h3>
-    <p>{{body}}</p>
-    <button>delete</button>
-    <hr>
+    <div id ="blogListEach">
+        <h3>{{title}}</h3>
+        <p>{{body}}</p>
+        <button id="deleteBtn_{{id}}">Delete</button>
+    </div>
 {{/each}}
+</div>
 
 <script src="/js/profile.js"></script>
+<script src="/js/deleteBlog.js"></script>

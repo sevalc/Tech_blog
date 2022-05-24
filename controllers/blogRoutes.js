@@ -27,7 +27,7 @@ router.get("/:id", (req, res) => {
 //create Blog
 router.post("/", (req, res) => {
   if(!req.session.user){
-    return res.status(401).json({msg:"ya gotta login to create a blog post!"})
+    return res.status(401).json({msg:"Please login to create a blog post!"})
 }
   Blog.create({
     title:req.body.title,
@@ -60,6 +60,9 @@ router.put("/:id", (req, res) => {
 
 //delete a Blog
 router.delete("/:id", (req, res) => {
+//   if(!req.session.user){
+//     return res.status(401).json({msg:"Please login to create a blog post!"})
+// }
   Blog.destroy({
     where: {
       id: req.params.id

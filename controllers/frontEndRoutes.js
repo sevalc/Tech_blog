@@ -29,6 +29,20 @@ router.get("/dashboard",(req,res) => {
       
 })
 
+router.get("/blogs/:id", async (req,res) => {
+    const oneBlog = await Blog.findByPk(req.params.id, {
+        include:[User]
+    })
+    const hbsBlog = oneBlog.get({plain: true});
+    console.log("************")
+    console.log(hbsBlog);
+    res.render("blog", {
+        blog:hbsBlog,
+        loggedIn:req.session.user?true:false,
+        username:req.session.user?.username
+    })
+})
+
 router.get("/profile",(req,res)=>{
     if(!req.session.user){
         return res.redirect("/login")

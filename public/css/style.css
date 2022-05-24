@@ -9,14 +9,44 @@ body {
 }
 
 header {
-    padding: 40px;
-    text-align: left;
+    padding-top: 10px;
+    padding-left:10px;
+    padding-right: 10px;
+    text-align: right;
     background: rgb(29, 1, 1);
     color: bisque;
     border-bottom-style: solid;
+    font-size: 20px;
 }
 
 #navLinksHeader {
     color: bisque;
     text-align: left;
+}
+
+#newBlog {
+    margin-left: 10px;
+}
+
+#blogListEach {
+    border: 5px solid rgb(29, 1, 1);
+    margin:15px 10px 15px 10px;
+}
+
+.bodyContainerBlog {
+    border: 5px solid rgb(29, 1, 1);
+    margin:15px 10px 15px 10px;
+}
+
+.blogTitle {
+    font-weight: bolder;
+}
+
+footer {
+    
+    padding: 20px;
+    text-align: center;
+    background: rgb(29, 1, 1);
+    color: bisque;
+    border-bottom-style: solid
 }

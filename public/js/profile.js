@@ -18,3 +18,4 @@ document.querySelector("#newBlog").addEventListener("submit",e=>{
         }
     })
 })
+
