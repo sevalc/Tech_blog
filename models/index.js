@@ -1,5 +1,6 @@
-const User = require("./User");
-const Blog = require("./Blog");
+
+const Blog = require('./Blog');
+const User = require('./User');
 
 User.hasMany(Blog);
 Blog.belongsTo(User)
